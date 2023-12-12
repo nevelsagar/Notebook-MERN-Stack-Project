@@ -6,7 +6,8 @@ const { body, validationResult } = require('express-validator');
 const router = express.Router();
 const fetchuser = require("../middleware/fetchuser");
 
-const JWT_SECRET = "Sagar@$451994$1996.#";
+
+const JWT_SECRET = process.env.JWT_SECRET_KEY
 
 
 //Route 1: create a user using Post "/api/auth/createuser":no login requred
@@ -137,7 +138,7 @@ router.post("/login", [
 
 ]
     , async (req, res) => {
-
+        console.log(JWT_SECRET)
         let success = false;
 
         //  If there are errors,return bad request and the errors

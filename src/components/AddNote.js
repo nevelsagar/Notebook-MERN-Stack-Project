@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import NoteContext from '../contex/notes/noteContext';
 
 function AddNote(props) {
-// console.log("AddNote")
   const context = useContext(NoteContext);
   const { addNote } = context;
 

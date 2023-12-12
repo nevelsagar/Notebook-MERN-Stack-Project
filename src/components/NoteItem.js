@@ -4,8 +4,6 @@ import NoteContext from '../contex/notes/noteContext';
 function NoteItem(props) {
     const { note,updateNote,showAlert } = props;
 
-    // console.log("note>>>>>>",note)
-
     const context = useContext(NoteContext);
     const {deleteNote } = context;
 
